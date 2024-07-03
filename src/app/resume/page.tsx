@@ -23,6 +23,8 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Button } from "@/components/ui/MovingBorder";
+import { LinkPreview } from "@/components/ui/LinkPreview";
 
 const about = {
   title: "About me",
@@ -134,23 +136,27 @@ const education = {
     {
       institution: "FST - Université de Haute-Alsace",
       degree: "Master Informatique et Mobilité",
-      dutaion: "2023 - En cours",
+      duration: "2023 - En cours",
+      link: "https://www.uha.fr/fr/index.html",
     },
     {
       institution: "FSEG - Université de Tunis El Manar",
       degree:
         "Master 1 professionnel : Ingénierie des systémes d information & data science",
-      dutaion: "2022 - 2023",
+      duration: "2022 - 2023",
+      link: "https://www.utm.rnu.tn/utm/fr/",
     },
     {
       institution: "ISAEG- Université de Gafsa",
       degree: "Licence National en Informatique de Gestion",
-      dutaion: "2019 - 2022 ",
+      duration: "2019 - 2022 ",
+      link: "https://ugaf.rnu.tn",
     },
     {
       institution: "Lycée Enassr Privée",
       degree: "Baccalauréat Mathématiques",
-      dutaion: "Juin 2019",
+      duration: "Juin 2019",
+      link: "",
     },
   ],
 };
@@ -173,16 +179,79 @@ const Resume = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="skills">Academic projects</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
 
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
-              experience
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {experience.description}
+                </p>
+                <ScrollArea className="h-[600px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-1 gap-[30px]">
+                    {experience.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#27272C] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
+                          <span className="text-accent">{item.position}</span>
+                          <h3 className=" min-h-[60px] text-center lg:text-left">
+                            {item.company}
+                          </h3>
+                          <div>
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                            <p className="text-white/60">{item.duration}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
             <TabsContent value="education" className="w-full">
-              education
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{education.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {education.description}
+                </p>
+                <ScrollArea className="h-[600px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-1 gap-[30px]">
+                    {education.items.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="bg-[#27272C] h-[200px] py-3 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        >
+                          <span className="text-accent">{item.degree}</span>
+                          {item.link !== "" ? (
+                            <LinkPreview
+                              url={item.link}
+                              className="min-h-[30px] text-center lg:text-left"
+                            >
+                              {item.institution}
+                            </LinkPreview>
+                          ) : (
+                            <h3 className="min-h-[30px] text-center lg:text-left">
+                              {" "}
+                              {item.institution}
+                            </h3>
+                          )}
+
+                          <div>
+                            <span className="w-[6px] h-[6px] rounded-full bg-accent text-white"></span>
+                            <p className="text-white/60">{item.duration}</p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
+              </div>
             </TabsContent>
             <TabsContent value="skills" className="w-full">
               skills
