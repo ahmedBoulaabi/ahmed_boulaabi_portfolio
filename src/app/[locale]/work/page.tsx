@@ -1,10 +1,9 @@
 "use client";
 
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
-
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 import {
@@ -15,44 +14,59 @@ import {
 } from "@/components/ui/tooltip";
 import Link from "next/link";
 import Image from "next/image";
-import { Opacity } from "@tsparticles/engine";
 import WorkSlideBtns from "@/components/ui/WorkSlideBtns";
-
-const projects = [
-  {
-    num: "01",
-    category: "full stack",
-    title: "Calorie Tracker ",
-    description: "Participation au développement d",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/images/work/thumb1.png",
-  },
-  {
-    num: "02",
-    category: "full stack",
-    title: "Calorie Tracker ",
-    description: "Participation au développement d",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/images/work/thumb2.png",
-    live: "",
-    github: "",
-  },
-  {
-    num: "03",
-    category: "full stack",
-    title: "Calorie Tracker ",
-    description: "Participation au développement d",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/images/work/thumb3.png",
-  },
-];
+import { useTranslations } from "next-intl"; // Import the translation hook
 
 const Work = () => {
+  const t = useTranslations("work"); // Fetch the translations for the "work" section
+
+  const projects = [
+    {
+      num: t("projects.project1.num"),
+      category: t("projects.project1.category"),
+      title: t("projects.project1.title"),
+      description: t("projects.project1.description"),
+      stack: t("projects.project1.stack").split("+"),
+      image: t("projects.project1.image"),
+      live: t("projects.project1.live"),
+      github: t("projects.project1.github"),
+    },
+    {
+      num: t("projects.project2.num"),
+      category: t("projects.project2.category"),
+      title: t("projects.project2.title"),
+      description: t("projects.project2.description"),
+      stack: t("projects.project2.stack").split("+"),
+      image: t("projects.project2.image"),
+      live: t("projects.project2.live"),
+      github: t("projects.project2.github"),
+    },
+    {
+      num: t("projects.project3.num"),
+      category: t("projects.project3.category"),
+      title: t("projects.project3.title"),
+      description: t("projects.project3.description"),
+      stack: t("projects.project3.stack").split("+"),
+      image: t("projects.project3.image"),
+      live: t("projects.project3.live"),
+      github: t("projects.project3.github"),
+    },
+    {
+      num: t("projects.project4.num"),
+      category: t("projects.project4.category"),
+      title: t("projects.project4.title"),
+      description: t("projects.project4.description"),
+      stack: t("projects.project4.stack").split("+"),
+      image: t("projects.project4.image"),
+      live: t("projects.project4.live"),
+      github: t("projects.project4.github"),
+    },
+  ];
+
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper: SwiperType) => {
     const currentIndex = swiper.activeIndex;
-
     setProject(projects[currentIndex]);
   };
 
@@ -88,11 +102,11 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
 
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex flex-wrap gap-4">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
-                      {item.name}
+                      {item}
                       {/* remove the last comma */}
                       {index !== project.stack.length - 1 && ","}
                     </li>
@@ -105,14 +119,14 @@ const Work = () => {
               <div className="flex items-center gap-4">
                 {/* live project button*/}
 
-                <Link href="https://www.youtube.com/results?search_query=vs+code+make+the+code+lauto+back+to+line">
+                <Link href={project.live || "#"}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live project</p>
+                        <p>{t("liveProject")}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -120,14 +134,14 @@ const Work = () => {
 
                 {/* github project button*/}
 
-                <Link href="https://www.youtube.com/results?search_query=vs+code+make+the+code+lauto+back+to+line">
+                <Link href={project.github || "#"}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github repository</p>
+                        <p>{t("githubRepository")}</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -147,7 +161,7 @@ const Work = () => {
                   <SwiperSlide key={index} className="w-full">
                     <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
                       {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-fukk h-full bg-black/10 z-10"></div>
+                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
@@ -155,7 +169,7 @@ const Work = () => {
                           fill
                           className="object-center"
                           alt=""
-                        ></Image>
+                        />
                       </div>
                     </div>
                   </SwiperSlide>

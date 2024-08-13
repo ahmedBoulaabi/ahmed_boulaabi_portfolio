@@ -1,0 +1,169 @@
+{
+  "Index": {
+    "subtitle": "Student & Software Developer",
+    "greeting": "Hello I'm",
+    "name": "Boulaabi Ahmed",
+    "description": "I excel in delivering high-quality digital products, leveraging a broad spectrum of programming languages and advanced technologies.",
+    "downloadCV": "Download CV"
+  },
+  "navigation": {
+    "hireMe": "Hire me",
+    "home": "Home",
+    "resume": "Resume",
+    "work": "Work",
+    "contact": "Contact"
+  },
+  "contact": {
+    "description": "Please fill out the form below to get in touch.",
+    "title": "Let's work together",
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "email": "Email address",
+    "phone": "Phone number",
+    "selectService": "Select a service",
+    "services": {
+      "webDevelopment": "Web Development",
+      "cdi": "Permanent Contract",
+      "cdd": "Fixed-term Contract",
+      "intern": "Intern"
+    },
+    "messagePlaceholder": "Type your message here.",
+    "sendMessage": "Send message",
+    "messageSent": "Message Sent",
+    "submissionFailed": "Submission Failed",
+    "thankYouMessage": "Thank you for your message. I will get back to you soon.",
+    "failedMessage": "Failed to send message",
+    "contactInfo": {
+      "phone": "Phone",
+      "email": "Email",
+      "adresse": "Address"
+    },
+    "contactDetails": {
+      "phone": "(+33) 6 27 32 13 98",
+      "email": "ahmed.boulaabi0306@gmail.com",
+      "address": "Mulhouse 68100, France"
+    }
+  },
+  "resume": {
+    "about": {
+      "title": "About Me",
+      "description": "I am a passionate software developer with extensive experience in crafting digital solutions. My skill set spans across various programming languages and technologies.",
+      "name": "Name",
+      "phone": "Phone",
+      "experience": "Experience",
+      "discord": "Discord",
+      "nationality": "Nationality",
+      "email": "Email",
+      "freelance": "Freelance",
+      "languages": "Languages"
+    },
+    "skills": {
+      "title": "My Skills",
+      "description": "Web Development",
+      "items": {
+        "html": "HTML 5",
+        "css": "CSS 3",
+        "javascript": "JavaScript",
+        "react": "React.js",
+        "tailwind": "Tailwind CSS",
+        "nextjs": "Next.js",
+        "nodejs": "Node.js",
+        "angular": "Angular",
+        "php": "PHP",
+        "springboot": "Spring Boot"
+      }
+    },
+    "experience": {
+      "title": "My Experience",
+      "description": "A brief overview of my professional experience and internships.",
+      "items": {
+        "internship1": {
+          "company": "Gafsa Regional Public Health Department",
+          "position": "Intern",
+          "duration": "January 2022 - April 2022"
+        },
+        "internship2": {
+          "company": "Emerging Consulting in collaboration with the Chamber of Commerce and Industry of the South-West of Tunisia",
+          "position": "Intern",
+          "duration": "August 2020 - September 2020"
+        }
+      }
+    },
+    "education": {
+      "title": "My Education",
+      "description": "An overview of my academic background.",
+      "items": {
+        "education1": {
+          "institution": "FST - University of Upper Alsace",
+          "degree": "Master in Computer Science and Mobility",
+          "duration": "2023 - Present",
+          "link": "https://www.uha.fr/fr/index.html"
+        },
+        "education2": {
+          "institution": "FSEG - University of Tunis El Manar",
+          "degree": "Master 1 in Information Systems Engineering & Data Science",
+          "duration": "2022 - 2023",
+          "link": "https://www.utm.rnu.tn/utm/fr/"
+        },
+        "education3": {
+          "institution": "ISAEG - University of Gafsa",
+          "degree": "License (Bachelor's Degree) in Computer Science and Management",
+          "duration": "2019 - 2022",
+          "link": "https://ugaf.rnu.tn"
+        },
+        "education4": {
+          "institution": "Private Enassr High School",
+          "degree": "Baccalaureate in Mathematics",
+          "duration": "June 2019",
+          "link": ""
+        }
+      }
+    }
+  },
+  "work": {
+    "projects": {
+      "project1": {
+        "num": "01",
+        "category": "Full Stack",
+        "title": "Academic project",
+        "description": "Developed a nutritional tracking website with a PHP back-end using PDO, AJAX for smooth UX, and MVC architecture for organized code. The front-end was responsive and visually appealing, built with HTML, CSS, and Bootstrap. Worked within an Agile team for efficient development.",
+        "stack": "Html/Css+PHP(PDO)+Javascript+AJAX+Agile",
+        "image": "/images/work/thumb1.png",
+        "live": "https://example.com/live-project-1",
+        "github": "https://github.com/example/repo1"
+      },
+      "project2": {
+        "num": "02",
+        "category": "Full Stack",
+        "title": "Academic project",
+        "description": "Developed EDX (EDucation eXpert), an educational management platform using Next.js, TypeScript, Supabase, and PostgreSQL with Drizzle ORM. Features include course scheduling, real-time attendance tracking, and user management, with a responsive front-end styled in Tailwind CSS. Built using Agile and RAD methodologies and deployed on Vercel.",
+        "stack": "Next.js+TypeScript+Tailwind CSS+Supabase+PostgreSQL+Drizzle ORM",
+        "image": "/images/work/thumb2.png",
+        "live": "https://example.com/live-project-2",
+        "github": "https://github.com/example/repo2"
+      },
+      "project3": {
+        "num": "03",
+        "category": "Full Stack",
+        "title": "Academic project",
+        "description": "Developed a healthcare platform enabling patients to search, rate, and comment on doctors, while doctors manage appointments and view feedback. Built with Angular for the front-end, NodeJS for the back-end, and MariaDB for data management, following Agile methodology for adaptability and continuous innovation.",
+        "stack": "Angular+NodeJS+MariaDB+Agile+Tailwind CSS",
+        "image": "/images/work/thumb3.png",
+        "live": "https://example.com/live-project-3",
+        "github": "https://github.com/example/repo3"
+      },
+      "project4": {
+        "num": "04",
+        "category": "CV & AR Integration",
+        "title": "Academic project",
+        "description": "Developed a multidisciplinary project combining computer vision and augmented reality to visualize pulmonary infections. Using Python and OpenCV for image processing, infection zones in pulmonary scans were identified and modeled in 3D with Blender. These models were overlaid on real-world images using ARuco markers, with OpenGL handling real-time rendering for augmented reality visualization.",
+        "stack": "Python+OpenCV+Blender+ARuco+OpenGL",
+        "image": "/images/work/thumb3.png",
+        "live": "https://example.com/live-project-4",
+        "github": "https://github.com/example/repo4"
+      }
+    },
+    "liveProject": "Live project",
+    "githubRepository": "GitHub repository"
+  }
+}
