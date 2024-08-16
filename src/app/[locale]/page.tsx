@@ -51,13 +51,13 @@ const Home = () => {
       </div>
       <Stats />
 
-      {/* <div className="pt-20 pb-20">
+      <div className="pt-20 pb-20">
         <Grid />
       </div>
-
+      {/* 
       <Clients />
-      <Approach />
-      <UsedTechs /> */}
+      <Approach /> */}
+      <UsedTechs />
     </section>
   );
 };

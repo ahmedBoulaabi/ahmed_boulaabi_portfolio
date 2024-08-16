@@ -56,7 +56,8 @@
       "nationality": "Nationalité",
       "email": "Email",
       "freelance": "Disponible",
-      "languages": "Langues"
+      "languages": "Langues",
+      "lgDetails": "Anglais, Français, Arabe"
     },
     "skills": {
       "title": "Mes Compétences",
@@ -166,5 +167,16 @@
     },
     "liveProject": "Projet en direct",
     "githubRepository": "Référentiel GitHub"
+  },
+  "stats": {
+    "yearsOfExperience": "Années d'expérience",
+    "projectsCompleted": "Projets complétés",
+    "technologiesMastered": "Technologies maîtrisées",
+    "codeCommits": "commits de code"
+  },
+  "grid": {
+    "title1": "Je privilégie la collaboration avec les clients, en favorisant une communication ouverte",
+    "title2": "Je suis très flexible avec les communications en fonction du fuseau horaire",
+    "title3": ""
   }
 }

@@ -55,7 +55,8 @@
       "nationality": "Nationality",
       "email": "Email",
       "freelance": "Freelance",
-      "languages": "Languages"
+      "languages": "Languages",
+      "lgDetails": "English, French, Arabic"
     },
     "skills": {
       "title": "My Skills",
@@ -165,5 +166,16 @@
     },
     "liveProject": "Live project",
     "githubRepository": "GitHub repository"
+  },
+  "stats": {
+    "yearsOfExperience": "Years of experience",
+    "projectsCompleted": "Projects completed",
+    "technologiesMastered": "Technologies mastered",
+    "codeCommits": "code commits"
+  },
+  "grid": {
+    "title1": "I prioritize client collaboration, fostering open communication",
+    "title2": "I'm very flexible with time zone communications",
+    "title3": ""
   }
 }

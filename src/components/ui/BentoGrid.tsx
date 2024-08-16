@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { GlobeDemo } from "./GridGlobe";
 import UsedTechs from "../UsedTechs";
+import { FileTreeDemo } from "../FileTreeDemo";
 
 export const BentoGrid = ({
   className,
@@ -63,22 +64,22 @@ export const BentoGridItem = ({
       </div>
       <div
         className={cn(
-          titleClassName,
-          "group-hover/bento:translate-x-2 transition duration-200 realtive md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
+          "group-hover/bento:translate-x-2 transition duration-200 realtive md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10",
+          titleClassName
         )}
       >
         <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
           {description}
         </div>
-        <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
+        <div className="font-sans font-bold text-lg lg:text-2xl max-w-96 z-10">
           {title}
         </div>
 
-        {id === 2 && <GlobeDemo />}
+        {/* {id === 2 && <GlobeDemo />} */}
 
         {id === 3 && (
-          <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-            <div className="flex flex-col gap-3 lg:gap-8">
+          <div className="absolute inset-0 flex justify-center items-center w-full">
+            {/* <div className="flex flex-col gap-3 lg:gap-8">
               {["React.js", "Next.js", "TypeScript"].map((item) => (
                 <span
                   key={item}
@@ -100,7 +101,8 @@ export const BentoGridItem = ({
                   {item}
                 </span>
               ))}
-            </div>
+            </div> */}
+            <FileTreeDemo />
           </div>
         )}
       </div>

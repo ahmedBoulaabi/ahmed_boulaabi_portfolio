@@ -40,6 +40,8 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/MovingBorder";
 import { LinkPreview } from "@/components/ui/LinkPreview";
 import { useTranslations } from "next-intl"; // Import the translation hook
+import Link from "next/link";
+import { BsArrowDownRight } from "react-icons/bs";
 
 const programming = {
   title: "Programming",
@@ -87,11 +89,13 @@ const Resume = () => {
       company: t("experience.items.internship1.company"),
       position: t("experience.items.internship1.position"),
       duration: t("experience.items.internship1.duration"),
+      link: "/work#project-3",
     },
     {
       company: t("experience.items.internship2.company"),
       position: t("experience.items.internship2.position"),
       duration: t("experience.items.internship2.duration"),
+      link: "",
     },
   ];
 
@@ -111,7 +115,7 @@ const Resume = () => {
       { fieldName: t("about.freelance"), fieldValue: "Available" },
       {
         fieldName: t("about.languages"),
-        fieldValue: "English, French, Arabic",
+        fieldValue: t("about.lgDetails"),
       },
     ],
   };
@@ -195,7 +199,7 @@ const Resume = () => {
                     {experienceItems.map((item, index) => (
                       <li
                         key={index}
-                        className="bg-[#27272C] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                        className="bg-[#27272C] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1 relative group"
                       >
                         <span className="text-accent">{item.position}</span>
                         <h3 className="min-h-[60px] text-center lg:text-left">
@@ -205,6 +209,12 @@ const Resume = () => {
                           <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                           <p className="text-white/60">{item.duration}</p>
                         </div>
+                        <Link
+                          href={item.link}
+                          className="w-[40px] h-[40px] rounded-full bg-white transition-all duration-500 flex justify-center items-center hover:-rotate-45 group-hover:bg-accent absolute bottom-4 right-4"
+                        >
+                          <BsArrowDownRight className="text-primary text-3xl" />
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -255,29 +265,29 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ScrollArea className="h-[600px]">
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                    {skills.items.map((item, index) => (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#27272C] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {item.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{item.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollArea>
-                <div className="flex flex-col gap-[30px] text-center xl:text-left py-8">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.items.map((item, index) => (
+                    <li key={index}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-full h-[150px] bg-[#27272C] rounded-xl flex justify-center items-center group">
+                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                              {item.icon}
+                            </div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p className="capitalize">{item.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {programming.description}
+                    {skills.description === "Web Development"
+                      ? programming.description
+                      : "Programmation"}
                   </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
@@ -300,12 +310,14 @@ const Resume = () => {
                     );
                   })}
                 </ul>
-                <div className="flex flex-col gap-[30px] text-center xl:text-left py-8">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {database.description}
+                    {skills.description === "Web Development"
+                      ? database.description
+                      : "Base de données"}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] pb-20">
                   {database.items.map((item, index) => {
                     return (
                       <li key={index}>
@@ -336,7 +348,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[700px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => (
                     <li
                       key={index}

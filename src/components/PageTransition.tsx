@@ -28,7 +28,7 @@ const PageTransition = ({
             opacity: [0, 1, 0],
             transition: { delay: 0, duration: 0.8, ease: "easeInOut" },
           }}
-          className="h-96 aspect-square left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute"
+          className="h-96 aspect-square left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 absolute pointer-events-none"
         >
           <Image
             src="/images/logo.png"

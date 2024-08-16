@@ -22,6 +22,7 @@ const Work = () => {
 
   const projects = [
     {
+      id: 1,
       num: t("projects.project1.num"),
       category: t("projects.project1.category"),
       title: t("projects.project1.title"),
@@ -32,6 +33,7 @@ const Work = () => {
       github: t("projects.project1.github"),
     },
     {
+      id: 2,
       num: t("projects.project2.num"),
       category: t("projects.project2.category"),
       title: t("projects.project2.title"),
@@ -42,6 +44,7 @@ const Work = () => {
       github: t("projects.project2.github"),
     },
     {
+      id: 3,
       num: t("projects.project3.num"),
       category: t("projects.project3.category"),
       title: t("projects.project3.title"),
@@ -52,6 +55,7 @@ const Work = () => {
       github: t("projects.project3.github"),
     },
     {
+      id: 4,
       num: t("projects.project4.num"),
       category: t("projects.project4.category"),
       title: t("projects.project4.title"),
