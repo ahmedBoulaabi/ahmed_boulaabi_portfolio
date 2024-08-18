@@ -320,7 +320,7 @@ const File = forwardRef<
           className={cn(
             "flex items-center gap-1 cursor-pointer text-sm pr-1 rtl:pl-1 rtl:pr-0 rounded-md  duration-200 ease-in-out",
             {
-              "bg-slate-100 dark:bg-slate-800": isSelected && isSelectable,
+              "bg-slate-800": isSelected && isSelectable,
             },
             isSelectable ? "cursor-pointer" : "opacity-50 cursor-not-allowed",
             className
@@ -371,8 +371,8 @@ const CollapseButton = forwardRef<
 
   return (
     <Button
-      variant={"primary"}
-      className="h-8 w-fit p-1 absolute bottom-1 right-2"
+      variant={"outline"}
+      className="h-8 w-fit p-1 absolute bottom-1 right-2 bg-red-500"
       onClick={
         expandedItems && expandedItems.length > 0
           ? closeAll

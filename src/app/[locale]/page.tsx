@@ -1,5 +1,3 @@
-import Approach from "@/components/Approach";
-import Clients from "@/components/Clients";
 import Grid from "@/components/Grid";
 import Photo from "@/components/Photo";
 import Social from "@/components/Social";
@@ -9,20 +7,26 @@ import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { FiDownload } from "react-icons/fi";
 
-const Home = () => {
+interface HomeProps {
+  params: {
+    locale: string;
+  };
+}
+
+export default function Home({ params: { locale } }: HomeProps) {
   const t = useTranslations("Index");
 
   return (
-    <section className="h-full">
+    <section className="h-fit">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-8">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">{t("subtitle")}</span>
-            <h1 className="h1">
+            <span className="text-lg">{t("subtitle")}</span>
+            <h1 className="h1 text-7xl py-4">
               {t("greeting")} <br />{" "}
               <span className="text-accent">{t("name")}</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-9 text-sm text-[15px] text-white/80">
               {t("description")}
             </p>
 
@@ -44,7 +48,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none xl:mb-0">
             <Photo />
           </div>
         </div>
@@ -54,12 +58,7 @@ const Home = () => {
       <div className="pt-20 pb-20">
         <Grid />
       </div>
-      {/* 
-      <Clients />
-      <Approach /> */}
       <UsedTechs />
     </section>
   );
-};
-
-export default Home;
+}

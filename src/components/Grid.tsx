@@ -14,18 +14,18 @@ const Grid = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className=" lg:min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
-      <section id="about" className="pt-4 pb-12 xl:pt-0 xl:pb-0 ">
+      <section id="about" className="pt-4 pb-12 px-8 xl:pt-0 xl:pb-0 ">
         <BentoGrid>
           <BentoGridItem
             id={1}
             key={1}
             title={t("title1")}
             description=""
-            className="lg:col-span-2 md:col-span-3 md:row-span-4 lg:min-h-[60vh]"
+            className="lg:col-span-2 md:col-span-3 row-span-2 sm:row-span-3 md:row-span-4 lg:min-h-[60vh] "
             img="/images/hello-pic.jpg"
-            imgClassName="w-full h-full mix-blend-lighten"
+            imgClassName="w-full h-full mix-blend-lighten object-contain"
             titleClassName="justify-end lg:max-w-[1200px] "
             spareImg=""
           />
@@ -45,7 +45,7 @@ const Grid = () => {
             key={3}
             title={t("title3")}
             description=""
-            className="lg:col-span-1 md:col-span-1 md:row-span-3"
+            className="lg:col-span-1 md:col-span-2 row-span-3 md:row-span-3"
             img=""
             imgClassName=""
             titleClassName="justify-start"

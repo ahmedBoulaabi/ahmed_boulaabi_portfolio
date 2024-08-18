@@ -15,11 +15,11 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import Loader from "@/components/ui/Loader"; // Ensure this path is correct
+import Loader from "@/components/ui/Loader";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/Alert";
 import { MailCheck } from "lucide-react";
 import clsx from "clsx";
-import { useTranslations } from "next-intl"; // Import useTranslations hook
+import { useTranslations } from "next-intl";
 
 const info = [
   {
@@ -40,7 +40,7 @@ const info = [
 ];
 
 const Contact = () => {
-  const t = useTranslations("contact"); // Initialize the hook with the "contact" namespace
+  const t = useTranslations("contact");
 
   const [formData, setFormData] = useState({
     firstname: "",

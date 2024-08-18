@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-import { GlobeDemo } from "./GridGlobe";
-import UsedTechs from "../UsedTechs";
 import { FileTreeDemo } from "../FileTreeDemo";
 
 export const BentoGrid = ({
@@ -13,7 +11,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid auto-rows-[8rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
+        "grid auto-rows-[8rem] lg:h-fit grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto",
         className
       )}
     >

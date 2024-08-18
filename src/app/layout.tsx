@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import { unstable_noStore } from "next/cache";
 
 async function loadMessages(locale: string) {
   try {
@@ -24,6 +25,7 @@ export default async function RootLayout({
   children,
   params,
 }: RootLayoutProps) {
+  unstable_noStore();
   const locale = params.locale || "en";
   console.log("Locale: ", locale); // Debugging: Log the locale
 
