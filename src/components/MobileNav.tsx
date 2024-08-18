@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import Image from "next/image";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import Flag from "react-flagkit";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const links = [
   {
@@ -29,8 +31,19 @@ const links = [
 const MobileNav = () => {
   const pathname = usePathname();
   const locale = useLocale();
+  const t = useTranslations("navigation");
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const otherLocale = locale === "en" ? "fr" : "en";
 
   const createLocalizedPath = (path: string): string => `/${locale}${path}`;
+
+  const handleLocaleChange = () => {
+    const newPath = `/${otherLocale}${pathname.replace(`/${locale}`, "")}`;
+    const search = searchParams.toString();
+    router.replace(`${newPath}${search ? `?${search}` : ""}`);
+  };
 
   return (
     <Sheet>
@@ -69,11 +82,24 @@ const MobileNav = () => {
                     : ""
                 } text-xl capitalize hover:text-accent transition-all`}
               >
-                {link.name}
+                {t(link.name)}
               </Link>
             );
           })}
         </nav>
+        {/* Language Switcher Button */}
+        <div className="mt-8 flex justify-center">
+          <button
+            className="rounded-full bg-accent p-2"
+            onClick={handleLocaleChange}
+          >
+            {locale === "en" ? (
+              <Flag country="FR" size={24} />
+            ) : (
+              <Flag country="GB" size={24} />
+            )}
+          </button>
+        </div>
       </SheetContent>
     </Sheet>
   );

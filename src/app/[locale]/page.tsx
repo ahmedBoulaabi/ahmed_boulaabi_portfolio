@@ -55,7 +55,7 @@ export default function Home({ params: { locale } }: HomeProps) {
       </div>
       <Stats />
 
-      <div className="pt-20 pb-20">
+      <div className="pt-20">
         <Grid />
       </div>
       <UsedTechs />

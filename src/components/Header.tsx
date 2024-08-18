@@ -1,13 +1,29 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Nav from "./Nav";
 import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Flag from "react-flagkit";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
 
 const Header = () => {
   const t = useTranslations("navigation");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  const otherLocale = locale === "en" ? "fr" : "en";
+
+  const handleLocaleChange = () => {
+    const newPath = `/${otherLocale}${pathname.replace(`/${locale}`, "")}`;
+    const search = searchParams.toString();
+    router.replace(`${newPath}${search ? `?${search}` : ""}`);
+  };
 
   return (
     <header className="py-8 text-white">
@@ -36,6 +52,14 @@ const Header = () => {
           <Link href="/contact">
             <Button>{t("hireMe")}</Button>
           </Link>
+          {/* Language Switcher Button */}
+          <Button className="rounded-full" onClick={handleLocaleChange}>
+            {locale === "en" ? (
+              <Flag country="FR" size={24} />
+            ) : (
+              <Flag country="GB" size={24} />
+            )}
+          </Button>{" "}
         </div>
 
         {/* Mobile nav */}

@@ -28,7 +28,7 @@ const slugs = [
 
 const UsedTechs = () => {
   return (
-    <section className="relative flex flex-col w-full justify-between overflow-hidden rounded-lg bg-background pb-20 pt-8 mx-auto my-0 space-y-8 px-4">
+    <section className="relative flex flex-col w-full justify-between overflow-hidden rounded-lg bg-background pb-4 mx-auto my-0 space-y-8 px-4">
       {/* <div className="flex flex-col md:flex-row items-center text-center w-full justify-between md:space-x-4">
         <div className="flex flex-col items-center text-center w-full md:w-1/2 lg:w-1/3 max-w-[15rem] mx-auto md:mx-0">
           <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-white">
