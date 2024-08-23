@@ -39,7 +39,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/MovingBorder";
 import { LinkPreview } from "@/components/ui/LinkPreview";
-import { useTranslations } from "next-intl"; // Import the translation hook
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { BsArrowDownRight } from "react-icons/bs";
 
@@ -82,7 +82,7 @@ const database = {
 };
 
 const Resume = () => {
-  const t = useTranslations("resume"); // Fetch the translations for the "about" section
+  const t = useTranslations("resume");
 
   const experienceItems = [
     {
@@ -112,7 +112,7 @@ const Resume = () => {
         fieldName: t("about.email"),
         fieldValue: "ahmed.boulaabi0306@gmail.com",
       },
-      { fieldName: t("about.freelance"), fieldValue: "Available" },
+      { fieldName: "Freelance", fieldValue: t("about.freelance") },
       {
         fieldName: t("about.languages"),
         fieldValue: t("about.lgDetails"),
@@ -348,21 +348,23 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[700px] mx-auto xl:mx-0">
-                  {about.info.map((item, index) => (
-                    <li
-                      key={index}
-                      className={`flex items-center justify-center xl:justify-start gap-4 ${
-                        item.fieldName === t("about.languages")
-                          ? "whitespace-nowrap"
-                          : ""
-                      }`}
-                    >
-                      <span className="text-white/60">{item.fieldName}</span>
-                      <span className="text-xl">{item.fieldValue}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="h-[700px]">
+                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[700px] mx-auto xl:mx-0">
+                    {about.info.map((item, index) => (
+                      <li
+                        key={index}
+                        className={`flex items-center justify-center xl:justify-start gap-4 ${
+                          item.fieldName === t("about.languages")
+                            ? "whitespace-nowrap"
+                            : ""
+                        }`}
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-xl">{item.fieldValue}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </TabsContent>
           </div>

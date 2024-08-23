@@ -5,12 +5,11 @@ import { unstable_noStore } from "next/cache";
 
 async function loadMessages(locale: string) {
   try {
-    console.log("Locale:", locale); // Debugging: Log the locale
     const messages = (await import(`../../messages/${locale}.json`)).default;
     return messages;
   } catch (error) {
     console.error(`Failed to load messages for locale: ${locale}`, error);
-    return null; // Return null to indicate failure
+    return null;
   }
 }
 
@@ -27,7 +26,6 @@ export default async function RootLayout({
 }: RootLayoutProps) {
   unstable_noStore();
   const locale = params.locale || "en";
-  console.log("Locale: ", locale); // Debugging: Log the locale
 
   const messages = await loadMessages(locale);
 

@@ -47,7 +47,6 @@ export default async function RootLayout({
 }: Readonly<RootLayoutProps>) {
   unstable_noStore();
   const locale = params.locale || "en";
-  console.log("Locale 1:", locale);
 
   const messages = await loadMessages(locale);
 
