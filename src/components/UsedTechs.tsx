@@ -41,7 +41,7 @@ const UsedTechs = () => {
             Dreaming of a <span className="text-accent">standout</span> website?
             <p> I'm here to make it happen.</p>
           </h1>
-          <a href="mailto:ahmed.boulaabi0306@gmail.com">
+          <a href="mailto:contact@ahmedboulaabi.com">
             <div>
               <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#0EB1D2_0%,#C3F73A_50%,#0EB1D2_100%)]" />

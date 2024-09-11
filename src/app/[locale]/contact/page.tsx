@@ -30,7 +30,7 @@ const info = [
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "ahmed.boulaabi0306@gmail.com",
+    description: "contact@ahmedboulaabi.com",
   },
   {
     icon: <FaMapMarkerAlt />,
@@ -64,7 +64,7 @@ const Contact = () => {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-    const response = await fetch("/api/contact", {
+    const response = await fetch("/en/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

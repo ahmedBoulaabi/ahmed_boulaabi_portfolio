@@ -110,7 +110,7 @@ const Resume = () => {
       { fieldName: t("about.nationality"), fieldValue: "Tunisian" },
       {
         fieldName: t("about.email"),
-        fieldValue: "ahmed.boulaabi0306@gmail.com",
+        fieldValue: "contact@ahmedboulaabi.com",
       },
       { fieldName: "Freelance", fieldValue: t("about.freelance") },
       {

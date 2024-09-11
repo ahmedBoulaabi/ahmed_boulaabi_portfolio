@@ -15,9 +15,9 @@ export async function POST(request: Request) {
 
   // Create a transporter
   let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: "smtppro.zoho.eu",
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL, // Your email
       pass: process.env.EMAIL_PASSWORD, // Your email password or app password
@@ -26,7 +26,7 @@ export async function POST(request: Request) {
 
   // Set up email data
   let mailOptions = {
-    from: email, // Sender address
+    from: "contact@ahmedboulaabi.com", // Sender address
     to: process.env.EMAIL, // List of receivers
     subject: "New Contact Form Submission",
     text: `Name: ${firstname} ${lastname}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}`,
