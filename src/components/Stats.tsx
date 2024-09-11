@@ -7,15 +7,15 @@ const Stats = () => {
 
   const stats = [
     {
-      num: 4,
+      num: 3,
       text: t("yearsOfExperience"),
     },
     {
-      num: 26,
+      num: 10,
       text: t("projectsCompleted"),
     },
     {
-      num: 8,
+      num: 5,
       text: t("technologiesMastered"),
     },
     {

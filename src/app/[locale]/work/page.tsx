@@ -65,6 +65,28 @@ const Work = () => {
       live: t("projects.project4.live"),
       github: t("projects.project4.github"),
     },
+    {
+      id: 5,
+      num: t("projects.project5.num"),
+      category: t("projects.project5.category"),
+      title: t("projects.project5.title"),
+      description: t("projects.project5.description"),
+      stack: t("projects.project5.stack").split("*"),
+      image: t("projects.project5.image"),
+      live: t("projects.project5.live"),
+      github: t("projects.project5.github"),
+    },
+    {
+      id: 6,
+      num: t("projects.project6.num"),
+      category: t("projects.project6.category"),
+      title: t("projects.project6.title"),
+      description: t("projects.project6.description"),
+      stack: t("projects.project6.stack").split("*"),
+      image: t("projects.project6.image"),
+      live: t("projects.project6.live"),
+      github: t("projects.project6.github"),
+    },
   ];
 
   const [project, setProject] = useState(projects[0]);
@@ -120,36 +142,40 @@ const Work = () => {
               {/* border */}
               <div className="border border-white/20"></div>
               {/* buttons */}
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 pb-20">
                 {/* live project button*/}
 
-                <Link href={project.live || "#"}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{t("liveProject")}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.live && (
+                  <Link href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{t("liveProject")}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
 
                 {/* github project button*/}
 
-                <Link href={project.github || "#"}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>{t("githubRepository")}</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {project.github && (
+                  <Link href={project.github || "#"}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{t("githubRepository")}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
               </div>
             </div>
           </div>

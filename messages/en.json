@@ -80,12 +80,12 @@
       "items": {
         "internship1": {
           "company": "Gafsa Regional Public Health Department",
-          "position": "Intern",
+          "position": "Web Development Intern",
           "duration": "January 2022 - April 2022"
         },
         "internship2": {
           "company": "Emerging Consulting in collaboration with the Chamber of Commerce and Industry of the South-West of Tunisia",
-          "position": "Intern",
+          "position": "Data Management Intern",
           "duration": "August 2020 - September 2020"
         }
       }
@@ -125,33 +125,33 @@
     "projects": {
       "project1": {
         "num": "01",
-        "category": "Full Stack",
+        "category": "Calorie tracker",
         "title": "Academic project",
         "description": "Developed a nutritional tracking website with a PHP back-end using PDO, AJAX for smooth UX, and MVC architecture for organized code. The front-end was responsive and visually appealing, built with HTML, CSS, and Bootstrap. Worked within an Agile team for efficient development.",
         "stack": "Html/Css+PHP(PDO)+Javascript+AJAX+Agile",
         "image": "/images/work/thumb1.png",
-        "live": "https://example.com/live-project-1",
-        "github": "https://github.com/example/repo1"
+        "live": "",
+        "github": "https://github.com/ahmedBoulaabi/calorie-tracker-php"
       },
       "project2": {
         "num": "02",
-        "category": "Full Stack",
+        "category": "EDX (EDucation-eXpert)",
         "title": "Academic project",
         "description": "Developed EDX (EDucation eXpert), an educational management platform using Next.js, TypeScript, Supabase, and PostgreSQL with Drizzle ORM. Features include course scheduling, real-time attendance tracking, and user management, with a responsive front-end styled in Tailwind CSS. Built using Agile and RAD methodologies and deployed on Vercel.",
         "stack": "Next.js+TypeScript+Tailwind CSS+Supabase+PostgreSQL+Drizzle ORM",
         "image": "/images/work/thumb2.png",
-        "live": "https://example.com/live-project-2",
-        "github": "https://github.com/example/repo2"
+        "live": "https://endyearproject-2024-teacher-assistant-01.vercel.app",
+        "github": "https://github.com/ahmedBoulaabi/EDX"
       },
       "project3": {
         "num": "03",
-        "category": "Full Stack",
+        "category": "SmartDoc",
         "title": "Academic project",
         "description": "Developed a healthcare platform enabling patients to search, rate, and comment on doctors, while doctors manage appointments and view feedback. Built with Angular for the front-end, NodeJS for the back-end, and MariaDB for data management, following Agile methodology for adaptability and continuous innovation.",
         "stack": "Angular+NodeJS+MariaDB+Agile+Tailwind CSS",
         "image": "/images/work/thumb3.png",
-        "live": "https://example.com/live-project-3",
-        "github": "https://github.com/example/repo3"
+        "live": "",
+        "github": ""
       },
       "project4": {
         "num": "04",
@@ -160,8 +160,28 @@
         "description": "Developed a multidisciplinary project combining computer vision and augmented reality to visualize pulmonary infections. Using Python and OpenCV for image processing, infection zones in pulmonary scans were identified and modeled in 3D with Blender. These models were overlaid on real-world images using ARuco markers, with OpenGL handling real-time rendering for augmented reality visualization.",
         "stack": "Python+OpenCV+Blender+ARuco+OpenGL",
         "image": "/images/work/thumb3.png",
-        "live": "https://example.com/live-project-4",
-        "github": "https://github.com/example/repo4"
+        "live": "",
+        "github": ""
+      },
+      "project5": {
+        "num": "05",
+        "category": "C2C-Sim",
+        "title": "Academic project",
+        "description": "Developed a C++ UI with Qt from Figma designs and created core functions to simulate car-to-car communication via 5G in Mulhouse. Built a C++ library for SUMO's API integration and implemented network simulations to model communication networks. Collaborated with a team of four to deliver a complete car and network simulation application.",
+        "stack": "Qt*C++*SUMO*LibSumo",
+        "image": "/images/work/thumb3.png",
+        "live": "",
+        "github": "https://github.com/ahmedBoulaabi/c2csim"
+      },
+      "project6": {
+        "num": "06",
+        "category": "IncidPro",
+        "title": "Academic project",
+        "description": "A disaster reporting platform that enables users to signal emergencies on a map, request various types of help, and improve response coordination for organizations like the Red Cross.",
+        "stack": "Next.js*Supabase*Drizzle ORM*Typescript",
+        "image": "/images/work/thumb3.png",
+        "live": "https://ihm-incidents.vercel.app",
+        "github": ""
       }
     },
     "liveProject": "Live project",

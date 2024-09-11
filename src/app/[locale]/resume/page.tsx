@@ -28,6 +28,10 @@ import {
   SiCsharp,
   SiMysql,
   SiMongodb,
+  SiSupabase,
+  SiDocker,
+  SiGithub,
+  SiKubernetes,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -66,6 +70,25 @@ const programming = {
   ],
 };
 
+const otherSkills = {
+  title: "otherSkills",
+  description: "otherSkills",
+  items: [
+    {
+      icon: <SiDocker />,
+      name: "Docker",
+    },
+    {
+      icon: <SiGithub />,
+      name: "Github",
+    },
+    {
+      icon: <SiKubernetes />,
+      name: "Kubernetes",
+    },
+  ],
+};
+
 const database = {
   title: "Database",
   description: "Database",
@@ -77,6 +100,10 @@ const database = {
     {
       icon: <SiMongodb />,
       name: "MongoDB",
+    },
+    {
+      icon: <SiSupabase />,
+      name: "Supabase",
     },
   ],
 };
@@ -317,8 +344,35 @@ const Resume = () => {
                       : "Base de données"}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] pb-20">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {database.items.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] bg-[#27272C] rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {item.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capitalize">{item.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description === "Web Development"
+                      ? "Other Skills"
+                      : "Autres connaissances"}
+                  </p>
+                </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] pb-20">
+                  {otherSkills.items.map((item, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
