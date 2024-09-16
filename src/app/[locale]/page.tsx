@@ -18,7 +18,7 @@ export default function Home({ params: { locale } }: HomeProps) {
 
   return (
     <section className="h-fit">
-      <div className="container mx-auto h-full">
+      <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-8">
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-lg">{t("subtitle")}</span>
@@ -58,9 +58,7 @@ export default function Home({ params: { locale } }: HomeProps) {
       </div>
       <Stats />
 
-      <div className="pt-20">
-        <Grid />
-      </div>
+      <Grid />
       <UsedTechs />
     </section>
   );

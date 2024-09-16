@@ -7,7 +7,7 @@
     "downloadCV": "Télécharger le CV"
   },
   "navigation": {
-    "hireMe": "Engagez-moi",
+    "hireMe": "Embauchez-moi",
     "home": "Accueil",
     "resume": "CV",
     "work": "Travail",
@@ -162,7 +162,7 @@
         "stack": "Python+OpenCV+Blender+ARuco+OpenGL",
         "image": "/images/work/thumb3.png",
         "live": "",
-        "github": ""
+        "github": "https://github.com/ahmedBoulaabi/Integration-CV-AR"
       },
       "project5": {
         "num": "05",

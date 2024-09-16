@@ -14,7 +14,7 @@ const Grid = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className=" lg:min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className=" lg:min-h-[70vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <section id="about" className="pt-4 pb-12 px-8 xl:pt-0 xl:pb-0 ">
         <BentoGrid>
