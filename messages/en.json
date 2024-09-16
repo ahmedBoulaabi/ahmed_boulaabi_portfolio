@@ -139,7 +139,7 @@
         "title": "Academic project",
         "description": "Developed EDX (EDucation eXpert), an educational management platform using Next.js, TypeScript, Supabase, and PostgreSQL with Drizzle ORM. Features include course scheduling, real-time attendance tracking, and user management, with a responsive front-end styled in Tailwind CSS. Built using Agile and RAD methodologies and deployed on Vercel.",
         "stack": "Next.js+TypeScript+Tailwind CSS+Supabase+PostgreSQL+Drizzle ORM",
-        "image": "/images/work/thumb2.png",
+        "image": "/images/work/edx_IMG.png",
         "live": "https://endyearproject-2024-teacher-assistant-01.vercel.app",
         "github": "https://github.com/ahmedBoulaabi/EDX"
       },
@@ -159,7 +159,7 @@
         "title": "Academic project",
         "description": "Developed a multidisciplinary project combining computer vision and augmented reality to visualize pulmonary infections. Using Python and OpenCV for image processing, infection zones in pulmonary scans were identified and modeled in 3D with Blender. These models were overlaid on real-world images using ARuco markers, with OpenGL handling real-time rendering for augmented reality visualization.",
         "stack": "Python+OpenCV+Blender+ARuco+OpenGL",
-        "image": "/images/work/thumb3.png",
+        "image": "/images/work/Integration-CV-AR_img.png",
         "live": "",
         "github": "https://github.com/ahmedBoulaabi/Integration-CV-AR"
       },
@@ -169,7 +169,7 @@
         "title": "Academic project",
         "description": "Developed a C++ UI with Qt from Figma designs and created core functions to simulate car-to-car communication via 5G in Mulhouse. Built a C++ library for SUMO's API integration and implemented network simulations to model communication networks. Collaborated with a team of four to deliver a complete car and network simulation application.",
         "stack": "Qt*C++*SUMO*LibSumo",
-        "image": "/images/work/thumb3.png",
+        "image": "/images/work/c2csim.png",
         "live": "",
         "github": "https://github.com/ahmedBoulaabi/c2csim"
       },
@@ -179,7 +179,7 @@
         "title": "Academic project",
         "description": "A disaster reporting platform that enables users to signal emergencies on a map, request various types of help, and improve response coordination for organizations like the Red Cross.",
         "stack": "Next.js*Supabase*Drizzle ORM*Typescript",
-        "image": "/images/work/thumb3.png",
+        "image": "/images/work/incidPro_img.png",
         "live": "https://ihm-incidents.vercel.app",
         "github": ""
       }

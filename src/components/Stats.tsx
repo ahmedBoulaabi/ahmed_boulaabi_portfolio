@@ -40,6 +40,11 @@ const Stats = () => {
                   delay={2}
                   className="text-4xl xl:text-[54px] font-extrabold"
                 />
+                {item.num === 500 && (
+                  <span className="text-xl xl:text-2xl font-extrabold relative -top-3 -ml-3">
+                    +
+                  </span>
+                )}
                 <p
                   className={`${
                     item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"

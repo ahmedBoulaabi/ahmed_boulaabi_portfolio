@@ -197,8 +197,9 @@ const Work = () => {
                         <Image
                           src={project.image}
                           fill
-                          className="object-center"
+                          className="object-cover"
                           alt=""
+                          unoptimized
                         />
                       </div>
                     </div>
