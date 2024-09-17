@@ -182,6 +182,16 @@
         "image": "/images/work/incidPro_img.png",
         "live": "https://ihm-incidents.vercel.app",
         "github": ""
+      },
+      "project7": {
+        "num": "07",
+        "category": "My Portfolio",
+        "title": "",
+        "description": "An open-source portfolio built with a clean and modular codebase, designed for developers to easily create a professional and modern online presence. This template features responsive design, customizable sections, and seamless integration with popular tools and frameworks, making it an ideal starting point for showcasing your skills and projects.",
+        "stack": "Next.js*Typescript*Framer Motion*Sentry",
+        "image": "/images/work/ab_portfolio.png",
+        "live": "https://ahmedboulaabi.com",
+        "github": "https://github.com/ahmedBoulaabi/ahmed_boulaabi_portfolio"
       }
     },
     "liveProject": "Live project",
