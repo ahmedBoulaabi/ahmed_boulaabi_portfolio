@@ -130,9 +130,9 @@
         "title": "Projet académique",
         "description": "Développement d'un site de suivi nutritionnel avec un back-end en PHP utilisant PDO, AJAX pour une UX fluide, et une architecture MVC pour un code organisé. Le front-end était réactif et attrayant, construit avec HTML, CSS et Bootstrap. Travail en équipe Agile pour un développement efficace.",
         "stack": "Html/Css+PHP(PDO)+Javascript+AJAX+Agile",
-        "image": "/images/work/thumb1.png",
+        "image": "/images/work/calorie_tracker.png",
         "live": "",
-        "github": "https://github.com/ahmedBoulaabi/calorie-tracker-php"
+        "github": "https://github.com/ahmedBoulaabi/archiweb_2024_projets_gr06"
       },
       "project2": {
         "num": "02",
