@@ -150,9 +150,9 @@
         "title": "Projet académique",
         "description": "Développement d'une plateforme de santé permettant aux patients de rechercher, évaluer et commenter les médecins, tandis que les médecins gèrent les rendez-vous et consultent les commentaires. Construit avec Angular pour le front-end, NodeJS pour le back-end, et MariaDB pour la gestion des données, en suivant la méthodologie Agile pour l'adaptabilité et l'innovation continue.",
         "stack": "Angular+NodeJS+MariaDB+Agile+Tailwind CSS",
-        "image": "/images/work/thumb3.png",
+        "image": "/images/work/smart-doc.png",
         "live": "",
-        "github": ""
+        "github": "https://github.com/ahmedBoulaabi/smartDoc"
       },
       "project4": {
         "num": "04",
