@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { unstable_noStore } from "next/cache";
+import { Analytics } from "@vercel/analytics/react"
 
 async function loadMessages(locale: string) {
   try {
@@ -35,6 +36,7 @@ export default async function RootLayout({
 
   return (
     <body>
+    <Analytics/>
       <NextIntlClientProvider locale={locale} messages={messages}>
         {children}
       </NextIntlClientProvider>
