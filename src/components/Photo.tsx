@@ -27,7 +27,7 @@ const Photo = () => {
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="object-contain scale-90"
           />
         </motion.div>
 
