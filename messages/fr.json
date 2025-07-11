@@ -1,6 +1,6 @@
 {
   "Index": {
-    "subtitle": "Étudiant & Développeur de logiciels",
+    "subtitle": "Développeur de logiciels",
     "greeting": "Bonjour, je suis",
     "name": "Boulaabi Ahmed",
     "description": "Je me spécialise dans la fourniture de produits numériques de haute qualité, en utilisant un large éventail de langages de programmation et de technologies avancées.",
@@ -79,6 +79,11 @@
       "title": "Mon Expérience",
       "description": "Un aperçu de mon expérience professionnelle et de mes stages.",
       "items": {
+        "internship3": {
+          "company": "CGI, France",
+          "position": "Stagiaire Ingénieur Logiciels",
+          "duration": "Mars 2025 - Août 2025"
+        },
         "internship1": {
           "company": "Direction Régionale de la Santé Publique de Gafsa",
           "position": "Stagiaire en Développement Web",

@@ -56,7 +56,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className={JetbrainsMono.variable}>
+      <body className={`${JetbrainsMono.variable} font-primary`}>
         <div className="w-full fixed inset-0 h-full z-0">
           <SparklesCore
             id="tsparticlesfullpage"

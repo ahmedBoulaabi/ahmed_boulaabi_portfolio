@@ -35,7 +35,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Adresse",
-    description: "Mulhouse 68100, France",
+    description: "Strasbourg 67000, France",
   },
 ];
 

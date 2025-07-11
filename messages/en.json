@@ -1,6 +1,6 @@
 {
   "Index": {
-    "subtitle": "Student & Software Developer",
+    "subtitle": "Software Developer",
     "greeting": "Hello I'm",
     "name": "Boulaabi Ahmed",
     "description": "I excel in delivering high-quality digital products, leveraging a broad spectrum of programming languages and advanced technologies.",
@@ -78,6 +78,11 @@
       "title": "My Experience",
       "description": "A brief overview of my professional experience and internships.",
       "items": {
+        "internship3": {
+          "company": "CGI, France",
+          "position": "Software Engineering Intern",
+          "duration": "March 2025 - August 2025"
+        },
         "internship1": {
           "company": "Gafsa Regional Public Health Department",
           "position": "Web Development Intern",

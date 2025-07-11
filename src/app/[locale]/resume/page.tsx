@@ -113,6 +113,12 @@ const Resume = () => {
 
   const experienceItems = [
     {
+      company: t("experience.items.internship3.company"),
+      position: t("experience.items.internship3.position"),
+      duration: t("experience.items.internship3.duration"),
+      link: "",
+    },
+    {
       company: t("experience.items.internship1.company"),
       position: t("experience.items.internship1.position"),
       duration: t("experience.items.internship1.duration"),
